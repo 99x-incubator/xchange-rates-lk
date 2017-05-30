@@ -1,0 +1,177 @@
+﻿@model List<AngularMVC.Models.tableData>   
+
+ 
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <script src="~/Scripts/cards.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <div class="container">
+
+        <h1> Exchange rates by the buying rate</h1>
+        <div class="row">
+            <div class="col-lg-6">
+
+                <md-card md-theme="default" id="USA" md-theme-watch style="height:30%; padding:20px; ">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">American Dollar</span>
+                            <span class="md-subhead"><b> @ViewBag.USDBank </b></span>
+                        </md-card-title-text>
+                        <md-card-title-text>
+                            Buying Rate: <span class="md-headline">  @ViewBag.USDBR LKR</span>
+                            Selling Rate: <span class="md-headline">@ViewBag.USDSR LKR</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-sm card-media"> <img style="height:50%; width:120%;" src="@ViewBag.USDlogo"></div>
+                        </md-card-title-media>
+
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <button class="btn btn-default">bank link</button>
+                        <button class="btn btn-default">Action 2</button>
+                    </md-card-actions>
+                </md-card>
+
+            </div>
+            <div class="col-lg-6">
+                <md-card md-theme="default" id="AUS" style="height:30%; padding:20px;  ">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Australian Dollar</span>
+                            <span class="md-subhead"><b>@ViewBag.ADBank</b></span>
+                        </md-card-title-text>
+                        <md-card-title-text>
+                            Buying Rate: <span class="md-headline">@ViewBag.ADBR LKR</span>
+                            Selling Rate: <span class="md-headline">@ViewBag.ADSR LKR</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-sm card-media"><img style="height:50%; width:120%;" src="@ViewBag.ADlogo"></div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <button class="btn btn-default">bank link</button>
+                        <button class="btn btn-default">Action 2</button>
+                    </md-card-actions>
+                </md-card>
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-6">
+                <md-card md-theme="default" id="EURO" style="height:30%; padding:20px; ">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Euro</span>
+                            <span class="md-subhead"><b>@ViewBag.ERBank</b></span>
+                        </md-card-title-text>
+                        <md-card-title-text>
+                            Buying Rate: <span class="md-headline">@ViewBag.ERBR LKR</span>
+                            Selling Rate: <span class="md-headline">@ViewBag.ERSR LKR</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-sm card-media"><img style="height:50%; width:120%;" src="@ViewBag.ERlogo"></div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <button class="btn btn-default">bank link</button>
+                        <button class="btn btn-default">Action 2</button>
+                    </md-card-actions>
+                </md-card>
+
+
+            </div>
+            <div class="col-lg-6">
+
+
+                <md-card md-theme="default" id="NOR" style="height:30%; padding:20px;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Norwegian Dollar </span>
+                            <span class="md-subhead"><b>@ViewBag.NORBank </b></span>
+                        </md-card-title-text>
+                        <md-card-title-text>
+                            Buying Rate: <span class="md-headline">@ViewBag.NORBR LKR</span>
+                            Selling Rate: <span class="md-headline">@ViewBag.NORSR LKR</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-sm card-media"> <div class="md-media-sm card-media"><img style="height:50%; width:120%;" src="@ViewBag.NORlogo"></div>
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <button class="btn btn-default">bank link</button>
+                        <button class="btn btn-default">Action 2</button>
+                    </md-card-actions>
+                </md-card>
+                <div class="clearfix">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+@* new table  *@
+
+<div class="container-fluid">
+
+    <h3><br />Exchange Rates</h3>
+    <h4><br />Daily Exchange Rate Update Process runs at 9:00am</h4>
+    <div>
+         
+        <table class="table table-striped">
+            <tr>
+                <th>Bank Name</th>
+                <th>Australian Dollar Buying Rate</th>
+                <th>Australian Dollar Selling Rate</th>
+                <th>Euro Buying Rate</th>
+                <th>Euro Selling Rate</th>
+                <th>Norwegian Krone Buying Rate</th>
+                <th>Norwegian Krone Selling Rate</th>
+                <th>American Dollar Buying Rate</th>
+                <th>American Dollar Selling Rate</th>
+                <th>Description</th>
+            </tr>
+
+         @foreach (var data in Model)
+         { <tr>
+
+                <td> @data.BankName</td>
+                <td>@data.ADBR</td>
+                <td> @data.ADSR</td>
+                <td> @data.EUBR</td>
+                <td>@data.EUSR</td>
+                <td>@data.NORBR</td>
+                <td>@data.NORSR</td>
+                <td>@data.USBR</td>
+                <td>@data.USSR</td>
+                <td>@data.siteUpdated</td>
+            </tr>
+         }
+
+        </table>
+
+         
+
+
+
+
+    </div>
+</div>
+
+

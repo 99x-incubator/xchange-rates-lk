@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/App.js"></script>
+</head>
+<body ng-app="myApp">
+     
+ 
+
+        <nav class="navbar navbar-inverse">
+
+             
+            <div class="navbar-header">
+                <img class="navbar-brand" style="height:80px; width:200px;" src="https://s31.postimg.org/xef0klf9n/xchangerate_Logo.png" alt="logo">
+                <!--                      //  <a class="navbar-brand" href="#/">Active Directory Users</a>-->
+                       
+            </div>
+
+
+        </nav>
+
+      
+ 
+
+    @RenderBody()
+ 
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <hr>
+    <br><br>
+    <footer id="footerWrapper" style="background-color:black">
+  
+               
+       
+        <section id="footerRights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-4">
+                        <p style="color:azure;">Copyright © 2016 <a href="http://www.99xtechnology.com/" target="blank">99x Technology</a> / All rights reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>

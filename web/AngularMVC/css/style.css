@@ -1,0 +1,80 @@
+.carddemoBasicUsage .card-media {
+  background-color: #999999; }
+.firstRow {
+    position:absolute;
+    left:50%;
+
+}
+ #USA {
+   position: relative;
+}
+#USA:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:url('http://fla.fg-a.com/American/1-lg-american-flag.jpg'); 
+    background-repeat: no-repeat;
+    width: 100%;
+    padding:1%;
+     background-size: 100% 100%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}
+ #AUS {
+   position: relative;
+}
+#AUS:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:url('http://www.freeimageslive.co.uk/image/view/1925/_original'); 
+    background-repeat: no-repeat;
+      background-size: 100% 100%;
+    width: 100%;
+    padding:1%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}
+ #EURO {
+   position: relative;
+}
+#EURO:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:url('http://www.clker.com/cliparts/c/9/a/a/1238968244441877538Anonymous_Flag_of_European_Union.svg.hi.png'); 
+    background-repeat: no-repeat;
+      background-size: 100% 100%;
+    width: 100%;
+    padding:1%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}
+
+ #NOR {
+   position: relative;
+}
+#NOR:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:url('http://images1.wikia.nocookie.net/__cb20101223111259/harrypotter/images/d/d1/Norwegian-flag.gif'); 
+    background-repeat: no-repeat;
+      background-size: 100% 100%;
+    width: 100%;
+    padding:1%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}

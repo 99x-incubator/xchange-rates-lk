@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.exchangeRates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="exchangeRates">
+          <Key>
+            <PropertyRef Name="bankId" />
+            <PropertyRef Name="bankName" />
+          </Key>
+          <Property Name="SiteUpdated" Type="varchar(max)" />
+          <Property Name="bankId" Type="int" Nullable="false" />
+          <Property Name="bankName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ADBR" Type="varchar" MaxLength="50" />
+          <Property Name="ADSR" Type="varchar" MaxLength="50" />
+          <Property Name="EUBR" Type="varchar" MaxLength="50" />
+          <Property Name="EUSR" Type="varchar" MaxLength="50" />
+          <Property Name="NORBR" Type="varchar" MaxLength="50" />
+          <Property Name="NORSR" Type="varchar" MaxLength="50" />
+          <Property Name="USBR" Type="varchar" MaxLength="50" />
+          <Property Name="USSR" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="TestModelStoreContainer">
+          <EntitySet Name="exchangeRates" EntityType="Self.exchangeRates" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [exchangeRates].[SiteUpdated] AS [SiteUpdated], 
+    [exchangeRates].[bankId] AS [bankId], 
+    [exchangeRates].[bankName] AS [bankName], 
+    [exchangeRates].[ADBR] AS [ADBR], 
+    [exchangeRates].[ADSR] AS [ADSR], 
+    [exchangeRates].[EUBR] AS [EUBR], 
+    [exchangeRates].[EUSR] AS [EUSR], 
+    [exchangeRates].[NORBR] AS [NORBR], 
+    [exchangeRates].[NORSR] AS [NORSR], 
+    [exchangeRates].[USBR] AS [USBR], 
+    [exchangeRates].[USSR] AS [USSR]
+    FROM [dbo].[exchangeRates] AS [exchangeRates]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="exchangeRate">
+          <Key>
+            <PropertyRef Name="bankId" />
+            <PropertyRef Name="bankName" />
+          </Key>
+          <Property Name="SiteUpdated" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bankId" Type="Int32" Nullable="false" />
+          <Property Name="bankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ADBR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADSR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EUBR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EUSR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NORBR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NORSR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USBR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USSR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="exchangeRates" EntityType="Self.exchangeRate" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+          <EntitySetMapping Name="exchangeRates">
+            <EntityTypeMapping TypeName="TestModel.exchangeRate">
+              <MappingFragment StoreEntitySet="exchangeRates">
+                <ScalarProperty Name="SiteUpdated" ColumnName="SiteUpdated" />
+                <ScalarProperty Name="bankId" ColumnName="bankId" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
+                <ScalarProperty Name="ADBR" ColumnName="ADBR" />
+                <ScalarProperty Name="ADSR" ColumnName="ADSR" />
+                <ScalarProperty Name="EUBR" ColumnName="EUBR" />
+                <ScalarProperty Name="EUSR" ColumnName="EUSR" />
+                <ScalarProperty Name="NORBR" ColumnName="NORBR" />
+                <ScalarProperty Name="NORSR" ColumnName="NORSR" />
+                <ScalarProperty Name="USBR" ColumnName="USBR" />
+                <ScalarProperty Name="USSR" ColumnName="USSR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
