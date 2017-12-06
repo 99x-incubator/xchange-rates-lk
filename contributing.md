@@ -30,7 +30,7 @@ GitHub tracked Bugs as Issues.Firstly follow the [ GitHub Issues ](https://githu
 
 This section guides how to contribute projects by Documentation. Documentation consists of Contributing.md,Code_Of_Conduct.md etc.Follow below instructions before create Documents for the project.
 
-* Follow [GitHub CODE_OF_CONDUCT]( https://github.com/99xt/any2pdf.js/blob/master/CODE_OF_CONDUCT.md )  before contributing.
+* Follow [GitHub CODE_OF_CONDUCT]( https://github.com/99xt/xchange-rates-lk/blob/master/CODE_OF_CONDUCT.md )  before contributing.
 * Make sure to select correct Licence before adding ** - If have any problems don't hesitate to contact via mail lists of organization.
 
 
